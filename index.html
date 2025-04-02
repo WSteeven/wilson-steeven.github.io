@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Wilson Cordova</title>
+    <!-- Agregar Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <!-- Agregar Estilos Personalizados -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .hero-section {
+            background-color: #007bff;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #007bff;
+        }
+        .card-body {
+            text-align: center;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            
+            <a class="navbar-brand" href="#">Wilson Cordova</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Introducción) -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/Profile.png" alt="ProfilePhoto" width="150px" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-10">
+                    <h1 class="display-4">¡Hola! Soy Wilson Cordova</h1>
+                    <p class="lead">Desarrollador Full Stack especializado en Laravel y Vue.js</p>
+                    <p></p>
+                </div>
+            </div>
+            <a href="#about" class="btn btn-light btn-lg">Conóceme</a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre mí -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <p class="text-center">Soy un desarrollador con experiencia en la creación de aplicaciones web dinámicas, utilizando tecnologías como Laravel, Vue.js, Python y más. Me apasiona crear soluciones eficientes y optimizar procesos. Siempre busco aprender nuevas tecnologías y mejorar mis habilidades en programación.</p>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="row">
+                <!-- Proyecto 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 1</h5>
+                            <p class="card-text">Descripción breve del proyecto. Aquí puedes mostrar los detalles del proyecto y las tecnologías usadas.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Proyecto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 2</h5>
+                            <p class="card-text">Descripción breve del proyecto. Muestra los detalles del proyecto y tecnologías usadas.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Proyecto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 3</h5>
+                            <p class="card-text">Descripción breve del proyecto. Agrega detalles sobre las tecnologías y herramientas usadas.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Social Links -->    
+    <section id="social-links" class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="section-title">Conéctame</h2>
+            <p>Sígueme en mis redes sociales profesionales:</p>
+            <a href="https://github.com/WSteeven" target="_blank" class="btn btn-dark btn-lg mx-3">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/wilson-cordova-78a247ba/" target="_blank" class="btn btn-primary btn-lg mx-3">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+             <a href="mailto:wilson972906@gmail.com" class="btn btn-danger btn-lg mx-3">
+            <i class="fas fa-envelope"></i> Correo
+        </a>
+        </div>
+    </section>
+    
+    <!-- Sección Contacto -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <form action="https://formspree.io/f/xovekekw" method="POST">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Tu Nombre" name="name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" placeholder="Tu Correo Electrónico" name="email" required>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <textarea class="form-control" rows="4" placeholder="Tu Mensaje" name="message" required></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Wilson Cordova | Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Agregar Bootstrap y JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
