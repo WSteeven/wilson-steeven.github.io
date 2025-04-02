@@ -1,40 +1,35 @@
-# 👨‍💻 Wilson Cordova - Ingeniero en Sistemas  
+# Mi Portafolio Web
 
-🚀 Desarrollador Full Stack | Especialista en Dirección de equipos de desarrollo, Desarrollo Web, Analisis de Datos, Machine Learning. | Apasionado por la innovación tecnológica  
+Este es el código fuente de mi página web de portafolio personal. Esta página está construida utilizando HTML, Bootstrap y JavaScript. A continuación, encontrarás la información actualizada sobre la configuración y los cambios realizados.
 
-## 🌐 Sobre mí  
-¡Hola! Soy Wilson Cordova, un Ingeniero en Sistemas con experiencia en desarrollo web, analisis de datos, inteligencia de negocio y automatización de procesos. Me encanta construir soluciones tecnológicas eficientes y escalables.  
+## Nuevas Características
 
-- 🔭 Actualmente trabajando en: JPCONSTRUCRED C.LTDA.  
-- 🌱 Aprendiendo más sobre: Inteligencia de negocios, python enfocado en IA  
-- 💡 Intereses: Cloud Computing, IA y Blockchain.  
-- 📫 Contáctame en: Email o LinkedIn.  
+- Se ha agregado un formulario de contacto funcional utilizando Formspree para enviar correos electrónicos directamente desde el formulario.
+- Se ha añadido una sección de redes sociales con botones para GitHub, LinkedIn y correo electrónico.
+- El diseño es completamente adaptable y se ajusta a todos los dispositivos mediante el uso de Bootstrap.
 
-## 🛠️ Tecnologías & Herramientas  
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)  
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)  
-![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white)  
-![Laravel](https://img.shields.io/badge/-Laravel-FF2D20?style=flat&logo=laravel&logoColor=white)  
-![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white)  
+## Cómo Configurar
 
+Si deseas clonar este repositorio y ejecutar el sitio en tu máquina local, sigue estos pasos:
 
-## 📂 Proyectos Destacados  
-### 🔹 FastAPI - Servidor de archivos multiproveedor  
-📌 **Descripción:** Sincronización de archivos desde un servidor alquilado a un servidor propio y despligue de los mismos mediante solicitudes de api con su respectiva key de proveedor. Funciona con N aplicaciones, y está automatizado tanto la sincronizacion de los archivos en el servidor propio como la eliminación periodica en las distintas aplicaciones que utilizan esta solución, así mismo la implementación en ellas para que realicen la busqueda automaticamente en FastAPI en caso de que el archivo no se encuentre en la aplicación.  
-🔗 [https://github.com/WSteeven/archivos_multiproveedor](https://github.com/WSteeven/archivos_multiproveedor)  
+1. Clona este repositorio:
 
+    ```bash
+    git clone https://github.com/WSteeven/mi-portafolio.git
+    ```
 
-### 🔹 ERP interno  - JPCONSTRUCRED  
-📌 **Descripción:** Breve explicación del proyecto.  
-🔗 [Repositorio privado](https://sistema.jpconstrucred.com)  
-![image](https://github.com/user-attachments/assets/a0198ae4-70a9-4839-8621-1c291e5a5cad)
+2. Abre el archivo `index.html` en tu navegador o utiliza un servidor local para previsualizar la página.
 
+3. Para el formulario de contacto, asegúrate de tener configurado Formspree o tu propio servicio backend.
 
-## 📬 Contacto  
-📧 Email: wilson972906@gmail.com  
-💼 LinkedIn: [Wilson Cordova](https://www.linkedin.com/in/wilson-cordova-78a247ba/)  
-🌐 Portafolio: [Wilson Cordova](wilson-cordova.is-a.dev)  
+## Descripción
 
----  
+Este portafolio incluye varias secciones, como un encabezado, habilidades, experiencia profesional, contacto, entre otras. Está diseñado para ser sencillo, limpio y profesional.
 
-© 2025 Wilson Cordova - Desarrollador & Ingeniero en Sistemas  
+## Tecnologías Utilizadas
+
+- **HTML5**
+- **CSS3**
+- **Bootstrap 4**
+- **JavaScript**
+- **Formspree (para el formulario de contacto)**
