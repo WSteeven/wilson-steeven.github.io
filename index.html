@@ -87,23 +87,17 @@
                         <a class="nav-link" href="#contact">Contacto </a>
                     </li>
                     <li class="nav-item">
-                        <a class="flag-icon flag-icon-es" onclick="changeLanguage('es')" style="cursor: pointer; font-size: 30px;"></a>
+                        <span class="flag-icon flag-icon-es" onclick="changeLanguage('es')" style="cursor: pointer; font-size: 30px;">
+                            <img src="images/flags/spain.png" alt="usa" width="24" height="16"class="me-2">
+                        </span>
                     </li>
                     <li class="nav-item">
-                        <span class="flag-icon flag-icon-us" onclick="changeLanguage('en')" style="cursor: pointer; font-size: 30px;"></span>
+                        <span class="flag-icon flag-icon-gb" onclick="changeLanguage('en')" style="cursor: pointer; font-size: 30px;">
+                            <img src="images/flags/usa.png" alt="usa" width="24" height="16"class="me-2">
+                        </span>
                     </li>
 
                 </ul>
-                
-                <!-- Selector de idioma con banderas -->
-                <div class="language-selector">
-                    <!-- Bandera de España (Español) -->
-                    <span class="flag-icon flag-icon-es" onclick="changeLanguage('es')" style="cursor: pointer; font-size: 30px;"></span>
-
-                    <!-- Bandera de Reino Unido (Inglés) -->
-                    <span class="flag-icon flag-icon-gb" onclick="changeLanguage('en')" style="cursor: pointer; font-size: 30px;"></span>
-                </div>
-
             </div>
         </div>
     </nav>
@@ -183,6 +177,14 @@
         <div class="container text-center">
             <h2 id="connect_me" class="section-title">Conéctame</h2>
             <p id="follow_me">Sígueme en mis redes sociales profesionales:</p>
+            <a href="#" class="btn btn-light btn-lg mx-3">
+                <img src="images/flags/usa.png" alt="usa" width="24" height="16"class="me-2">
+                USA
+            </a>
+            <a href="#" class="btn btn-light btn-lg mx-3">
+                <img src="images/flags/spain.png" alt="spain" width="24" height="16" class="me-2">
+                ES
+            </a>
             <a href="https://github.com/WSteeven" target="_blank" class="btn btn-dark btn-lg mx-3">
                 <i class="fab fa-github"></i> GitHub
             </a>
@@ -225,7 +227,7 @@
 <script >
     const translations = {
     en: {
-        greeting: "¡Hola! Soy Wilson Cordova",
+        greeting: "Hello! I'm Wilson Cordova",
         title: "Welcome to My Portfolio",
         description: "I am a Full Stack Developer specialized in Laravel and Vue.js.",
         contact: "Contact",
@@ -240,7 +242,7 @@
         message: "Your Message",
     },
     es: {
-        greeting: "Hello! I'm Wilson Cordova",
+        greeting: "¡Hola! Soy Wilson Cordova",
         title: "Bienvenido a mi Portafolio",
         description: "Soy un Desarrollador Full Stack especializado en Laravel y Vue.js.",
         contact: "Contacto",
@@ -265,9 +267,10 @@
         localStorage.setItem('language', language);
 
     // Actualiza los textos según el idioma seleccionado
+    document.getElementById('greeting').innerText = translations[language].greeting;
     document.getElementById('title').innerText = translations[language].title;
     document.getElementById('description').innerText = translations[language].description;
-    document.getElementById('contact').innerText = translations[language].contact;
+    // document.getElementById('contact').innerText = translations[language].contact;
     document.getElementById('follow_me').innerText = translations[language].follow_me;
     // document.getElementById('github').innerText = translations[language].github;
     // document.getElementById('linkedin').innerText = translations[language].linkedin;
