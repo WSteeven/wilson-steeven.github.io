@@ -1,289 +1,307 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio - Wilson Cordova</title>
     <!-- Agregar Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
 
-    <!-- Agregar el CDN de Flag Icon CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icon.min.css">
-
-
-    <!-- Agregar Estilos Personalizados -->
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .navbar {
-            background-color: #343a40;
-        }
-        .navbar-brand, .nav-link {
-            color: #fff !important;
-        }
-        .hero-section {
-            background-color: #007bff;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        .section-title {
-            margin-top: 50px;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #007bff;
-        }
-        .card-body {
-            text-align: center;
-        }
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-
-        .language-selector {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .flag-icon {
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-
-        .flag-icon:hover {
-            transform: scale(1.1); /* Efecto de hover al pasar el ratón */
-        }
-
-    </style>
-</head>
-<body>
-
+    <!-- Enlazar el archivo de estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            
-            <a class="navbar-brand" href="#">Wilson Cordova</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre mí</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto </a>
-                    </li>
-                    <li class="nav-item">
-                        <span class="flag-icon flag-icon-es" onclick="changeLanguage('es')" style="cursor: pointer; font-size: 30px;">
-                            <img src="images/flags/spain.png" alt="usa" width="24" height="16"class="me-2">
-                        </span>
-                    </li>
-                    <li class="nav-item">
-                        <span class="flag-icon flag-icon-gb" onclick="changeLanguage('en')" style="cursor: pointer; font-size: 30px;">
-                            <img src="images/flags/usa.png" alt="usa" width="24" height="16"class="me-2">
-                        </span>
-                    </li>
-
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="#">Wilson Cordova</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" id="about_me" href="#about">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="projects" href="#projects">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact" href="#contact">Contacto </a>
+            </li>
+            <!-- idioma -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="languageDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  id="current-flag"
+                  src="images/flags/spain.png"
+                  alt="Idioma"
+                  width="24"
+                  height="16"
+                />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="languageDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="changeLanguage('es')"
+                    id="lang-es"
+                  >
+                    <img
+                      src="images/flags/spain.png"
+                      alt="Español"
+                      width="24"
+                      height="16"
+                      class="me-2"
+                    />
+                    Español
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="changeLanguage('en')"
+                    id="lang-en"
+                  >
+                    <img
+                      src="images/flags/usa.png"
+                      alt="English"
+                      width="24"
+                      height="16"
+                      class="me-2"
+                    />
+                    Inglés
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Sección Hero (Introducción) -->
     <section class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-2">
-                    <img src="images/Profile.png" alt="ProfilePhoto" width="150px" class="img-fluid rounded-circle">
-                </div>
-                <div class="col-10">
-                    <h1 id="greeting" class="display-4">¡Hola! Soy Wilson Cordova</h1>
-                    <p id="title"></p>
-                    
-                    <p><span class="flag-icon flag-icon-us" onclick="changeLanguage('en')" style="cursor: pointer; font-size: 30px;"></span></p>
-                    <p id="description" class="lead">Desarrollador Full Stack especializado en Laravel y Vue.js</p>
-                    <p></p>
-                </div>
-            </div>
-            <a href="#about" id="know_me" class="btn btn-light btn-lg">Conóceme</a>
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img
+              src="images/Profile.png"
+              alt="ProfilePhoto"
+              width="150px"
+              class="img-fluid rounded-circle"
+            />
+          </div>
+          <div class="col-10">
+            <h1 id="greeting" class="display-4">¡Hola! Soy Wilson Cordova</h1>
+            <p id="title"></p>
+
+            <p id="description" class="lead"></p>
+            <p></p>
+          </div>
         </div>
+        <a href="#about" id="know_me" class="btn btn-light btn-lg">Conóceme</a>
+      </div>
     </section>
 
     <!-- Sección Sobre mí -->
     <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
-            <p class="text-center">Soy un desarrollador con experiencia en la creación de aplicaciones web dinámicas, utilizando tecnologías como Laravel, Vue.js, Python y más. Me apasiona crear soluciones eficientes y optimizar procesos. Siempre busco aprender nuevas tecnologías y mejorar mis habilidades en programación.</p>
-        </div>
+      <div class="container">
+        <h2 class="section-title" id="about_me2">Sobre mí</h2>
+        <p class="text-center" id="description_about"></p>
+      </div>
     </section>
 
     <!-- Sección Proyectos -->
-    <section id="projects" class="bg-light py-5">
-        <div class="container">
-            <h2 class="section-title">Mis Proyectos</h2>
-            <div class="row">
-                <!-- Proyecto 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Proyecto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Proyecto 1</h5>
-                            <p class="card-text">Descripción breve del proyecto. Aquí puedes mostrar los detalles del proyecto y las tecnologías usadas.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Proyecto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Proyecto 2</h5>
-                            <p class="card-text">Descripción breve del proyecto. Muestra los detalles del proyecto y tecnologías usadas.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Proyecto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Proyecto 3</h5>
-                            <p class="card-text">Descripción breve del proyecto. Agrega detalles sobre las tecnologías y herramientas usadas.</p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
+    <section class="bg-light py-5">
+      <div class="container">
+        <h2 class="section-title" id="my_projects" >Mis Proyectos</h2>
+        <div class="row">
+          <!-- Proyecto 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://placehold.org/350x200"
+                class="card-img-top"
+                alt="Proyecto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title" id="project1">Proyecto 1</h5>
+                <p class="card-text" id="description_project1">
+                  Descripción breve del proyecto. Aquí puedes mostrar los
+                  detalles del proyecto y las tecnologías usadas.
+                </p>
+                <a href="#" class="btn btn-primary" id="see_more1">Ver más</a>
+              </div>
             </div>
+          </div>
+          <!-- Proyecto 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://placehold.org/350x200"
+                class="card-img-top"
+                alt="Proyecto 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title" id="project2">Proyecto 2</h5>
+                <p class="card-text" id="description_project2">
+                  Descripción breve del proyecto. Muestra los detalles del
+                  proyecto y tecnologías usadas.
+                </p>
+                <a href="#" class="btn btn-primary" id="see_more2">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <!-- Proyecto 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="https://placehold.org/350x200"
+                class="card-img-top"
+                alt="Proyecto 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title" id="project3">Proyecto 3</h5>
+                <p class="card-text" id="description_project3">
+                  Descripción breve del proyecto. Agrega detalles sobre las
+                  tecnologías y herramientas usadas.
+                </p>
+                <a href="#" class="btn btn-primary" id="see_more3">Ver más</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Sección Social Links -->    
+    <!-- Sección Social Links -->
     <section id="social-links" class="bg-light py-5">
-        <div class="container text-center">
-            <h2 id="connect_me" class="section-title">Conéctame</h2>
-            <p id="follow_me">Sígueme en mis redes sociales profesionales:</p>
-            <a href="#" class="btn btn-light btn-lg mx-3">
-                <img src="images/flags/usa.png" alt="usa" width="24" height="16"class="me-2">
-                USA
-            </a>
-            <a href="#" class="btn btn-light btn-lg mx-3">
-                <img src="images/flags/spain.png" alt="spain" width="24" height="16" class="me-2">
-                ES
-            </a>
-            <a href="https://github.com/WSteeven" target="_blank" class="btn btn-dark btn-lg mx-3">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/wilson-cordova-78a247ba/" target="_blank" class="btn btn-primary btn-lg mx-3">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-             <a href="mailto:wilson972906@gmail.com" class="btn btn-danger btn-lg mx-3" id="email">
-            <i class="fas fa-envelope"></i> Correo
+      <div class="container text-center">
+        <h2 id="connect_me" class="section-title">Conéctame</h2>
+        <p id="follow_me">Sígueme en mis redes sociales profesionales:</p>
+        <a
+          href="https://github.com/WSteeven"
+          target="_blank"
+          class="btn btn-dark btn-lg mx-3"
+        >
+          <i class="fab fa-github"></i> GitHub
         </a>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/wilson-cordova-78a247ba/"
+          target="_blank"
+          class="btn btn-primary btn-lg mx-3"
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a
+          href="mailto:wilson972906@gmail.com"
+          target="_blank"
+          class="btn btn-danger btn-lg mx-3"
+        >
+          <i class="fas fa-envelope"></i> Mail
+        </a>
+
+        <br />
+        <br />
+        <br />
+
+        <p id="o"></p>
+        <p id="contact_me_directly"></p>
+      </div>
     </section>
-    
+
     <!-- Sección Contacto -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 id="contact" class="section-title">Contacto</h2>
-            <form action="https://formspree.io/f/xovekekw" method="POST">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Tu Nombre" name="name" id="name" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <input type="email" class="form-control" placeholder="Tu Correo Electrónico" name="email" id="email_placeholder" required>
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <textarea class="form-control" rows="4" placeholder="Tu Mensaje" name="message" id="message" required></textarea>
-                    </div>
-                    <div class="col-md-12">
-                        <button type="submit" id="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+    <section id="contact_form_mail" class="py-5">
+      <div class="container">
+        <h2 id="contact_form" class="section-title">Contacto</h2>
+        <form action="https://formspree.io/f/xovekekw" method="POST">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Tu Nombre"
+                name="name"
+                id="name"
+                required
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Tu Correo Electrónico"
+                name="email"
+                id="email_placeholder"
+                required
+              />
+            </div>
+            <div class="col-md-12 mb-3">
+              <textarea
+                class="form-control"
+                rows="4"
+                placeholder="Tu Mensaje"
+                name="message"
+                id="message"
+                required
+              ></textarea>
+            </div>
+            <div class="col-md-12">
+              <button
+                type="submit"
+                id="submit"
+                class="btn btn-primary btn-block"
+              >
+                Enviar Mensaje
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </section>
 
     <!-- Pie de página -->
     <footer>
-        <p>&copy; 2025 Wilson Cordova | Todos los derechos reservados.</p>
+      <p id="copyright">&copy; 2025 Wilson Cordova | Todos los derechos reservados.</p>
     </footer>
-<script >
-    const translations = {
-    en: {
-        greeting: "Hello! I'm Wilson Cordova",
-        title: "Welcome to My Portfolio",
-        description: "I am a Full Stack Developer specialized in Laravel and Vue.js.",
-        contact: "Contact",
-        follow_me: "Follow me on my professional social networks:",
-        know_me: "Know me",
-        github: "GitHub",
-        linkedin: "LinkedIn",
-        email: "Email",
-        submit: "Submit Message",
-        name: "Your Name",
-        email_placeholder: "Your Email",
-        message: "Your Message",
-    },
-    es: {
-        greeting: "¡Hola! Soy Wilson Cordova",
-        title: "Bienvenido a mi Portafolio",
-        description: "Soy un Desarrollador Full Stack especializado en Laravel y Vue.js.",
-        contact: "Contacto",
-        follow_me: "Sígueme en mis redes sociales profesionales:",
-        know_me: "Conóceme",
-        github: "GitHub",
-        linkedin: "LinkedIn",
-        email: "Correo Electrónico",
-        submit: "Enviar Mensaje",
-        name: "Tu Nombre",
-        email_placeholder: "Tu Correo Electrónico",
-        message: "Tu Mensaje",
-    }
-};
+    <script src="javascript/translations.js"></script>
+    <script src="javascript/main.js"></script>
 
-
-    window.onload = function() {
-        const savedLanguage = localStorage.getItem('language') || 'es';
-        changeLanguage(savedLanguage); // Puedes usar 'en' para inglés si lo prefieres
-    };
-    function changeLanguage(language) {
-        localStorage.setItem('language', language);
-
-    // Actualiza los textos según el idioma seleccionado
-    document.getElementById('greeting').innerText = translations[language].greeting;
-    document.getElementById('title').innerText = translations[language].title;
-    document.getElementById('description').innerText = translations[language].description;
-    // document.getElementById('contact').innerText = translations[language].contact;
-    document.getElementById('follow_me').innerText = translations[language].follow_me;
-    // document.getElementById('github').innerText = translations[language].github;
-    // document.getElementById('linkedin').innerText = translations[language].linkedin;
-    document.getElementById('email').innerText = translations[language].email;
-    // document.getElementById('submit').innerText = translations[language].submit;
-    // document.getElementById('name').setAttribute('placeholder', translations[language].name);
-    // document.getElementById('email_placeholder').setAttribute('placeholder', translations[language].email_placeholder);
-    // document.getElementById('message').setAttribute('placeholder', translations[language].message);
-}
-
-</script>
     <!-- Agregar Bootstrap y JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
