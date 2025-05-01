@@ -116,7 +116,8 @@
     <section class="hero-section">
       <div class="container">
         <div class="row">
-          <div class="col-2">
+          <div class="col-2 d-none d-sm-block">
+            <!-- Ocultar imagen en pantallas pequeñas -->
             <img
               src="images/Profile.png"
               alt="ProfilePhoto"
@@ -124,10 +125,17 @@
               class="img-fluid rounded-circle"
             />
           </div>
-          <div class="col-10">
+          <div class="col-12 d-sm-none">
+            <!-- Usar col-12 en pantallas pequeñas -->
             <h1 id="greeting" class="display-4">¡Hola! Soy Wilson Cordova</h1>
             <p id="title"></p>
-
+            <p id="description" class="lead"></p>
+            <p></p>
+          </div>
+          <div class="col-10 d-none d-sm-block">
+            <!-- Mostrar en pantallas grandes -->
+            <h1 id="greeting" class="display-4">¡Hola! Soy Wilson Cordova</h1>
+            <p id="title"></p>
             <p id="description" class="lead"></p>
             <p></p>
           </div>
@@ -147,7 +155,7 @@
     <!-- Sección Proyectos -->
     <section class="bg-light py-5">
       <div class="container">
-        <h2 class="section-title" id="my_projects" >Mis Proyectos</h2>
+        <h2 class="section-title" id="my_projects">Mis Proyectos</h2>
         <div class="row">
           <!-- Proyecto 1 -->
           <div class="col-md-4 mb-4">
@@ -212,27 +220,37 @@
       <div class="container text-center">
         <h2 id="connect_me" class="section-title">Conéctame</h2>
         <p id="follow_me">Sígueme en mis redes sociales profesionales:</p>
-        <a
-          href="https://github.com/WSteeven"
-          target="_blank"
-          class="btn btn-dark btn-lg mx-3"
-        >
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/wilson-cordova-78a247ba/"
-          target="_blank"
-          class="btn btn-primary btn-lg mx-3"
-        >
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a
-          href="mailto:wilson972906@gmail.com"
-          target="_blank"
-          class="btn btn-danger btn-lg mx-3"
-        >
-          <i class="fas fa-envelope"></i> Mail
-        </a>
+
+        <!-- Contenedor que cambia según el tamaño de la pantalla -->
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-4 mb-3">
+            <a
+              href="https://github.com/WSteeven"
+              target="_blank"
+              class="btn btn-dark btn-lg w-100"
+            >
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+          <div class="col-12 col-sm-4 mb-3">
+            <a
+              href="https://www.linkedin.com/in/wilson-cordova-78a247ba/"
+              target="_blank"
+              class="btn btn-primary btn-lg w-100"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+          <div class="col-12 col-sm-4 mb-3">
+            <a
+              href="mailto:wilson972906@gmail.com"
+              target="_blank"
+              class="btn btn-danger btn-lg w-100"
+            >
+              <i class="fas fa-envelope"></i> Mail
+            </a>
+          </div>
+        </div>
 
         <br />
         <br />
@@ -295,7 +313,9 @@
 
     <!-- Pie de página -->
     <footer>
-      <p id="copyright">&copy; 2025 Wilson Cordova | Todos los derechos reservados.</p>
+      <p id="copyright">
+        &copy; 2025 Wilson Cordova | Todos los derechos reservados.
+      </p>
     </footer>
     <script src="javascript/translations.js"></script>
     <script src="javascript/main.js"></script>
